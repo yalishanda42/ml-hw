@@ -42,5 +42,52 @@
     H_1 &= k (H_0 - 1) + 1 \\
 \end{align*}
 
+\section*{Задача 2}
+
+\section*{Задача 3}
+
+Примери 1 и 2  от дадените са абсолютно еднакви, както и примери 5 и 6, т.е. множеството се състои от следните примери:
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c| }
+    \hline
+    № & \(A_1\) & \(A_2\) & Клас \\
+    \hline
+    1 & T & T & + \\
+    2 & T & F & -- \\
+    3 & F & F & + \\
+    4 & F & T & -- \\
+    \hline
+\end{tabular}
+\end{center}
+
+\subsection*{а)}
+
+Сред обучаващите примери съдържат точно 2 положителни и 2 отрицателни,
+следователно ентропията по отношение на целевата класификация е равна на 1, понеже
+\begin{align*}
+    Entropy(S) &= \sum_{i \in \{+, -\}} -p_i \log_2 p_i = \\
+      &= -p_+ \log_2 p_+ - p_- \log_2 p_- = \\
+      &= -\frac{1}{2} \log_2 \frac{1}{2} - \frac{1}{2} \log_2 \frac{1}{2} = \\
+      &= -1 \log_2 \frac{1}{2} = (-1)^2 = 1
+\end{align*}
+
+\subsection*{б)}
+
+\[
+    Gain(S, A_2) = Entropy(S) - \sum_{v \in \{T, F\}} \frac{|S_v|}{|S|} Entropy(S_v),
+\]
+
+където \( S_v = \{ s \in S \, | \, A_2(s) = v \} \).
+
+\begin{align*}
+    Gain(S, A_2) &= 1 - \frac{|S_T|}{|S|} Entropy(S_T) - \frac{|S_F|}{|S|} Entropy(S_F) = \\
+      &= 1 - (\frac{2}{4} . 1 + \frac{2}{4} . 1) = 1 - 1 \\
+      &= 0
+\end{align*}
+
+
+\section*{Задача 4}
+
 \end{document}
 
